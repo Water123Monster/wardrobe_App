@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_10sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/unconfirmed_seller_name"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="@string/賣場名稱"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/second_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintTop_toBottomOf="@id/unconfirmed_seller_name"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/stroke_layout_bottom_only">
+
+        <ImageView
+            android:id="@+id/rating_product_imageview"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/stroke_layout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/rating_product_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/商品名稱"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/rating_product_imageview"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/rating_product_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:gravity="center"
+            android:text="@string/選項"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/rating_product_imageview"
+            app:layout_constraintTop_toBottomOf="@+id/rating_product_name"
+            app:layout_constraintBottom_toTopOf="@id/rating_product_price"/>
+
+        <TextView
+            android:id="@+id/rating_product_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/購物車商品金額"
+            android:textSize="16sp"
+            android:textColor="#EA0000"
+            app:layout_constraintEnd_toEndOf="@id/rating_product_quantity"
+            app:layout_constraintBottom_toBottomOf="@id/rating_product_imageview" />
+
+        <TextView
+            android:id="@+id/rating_product_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="@id/rating_product_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/x1"
+            android:textSize="@dimen/_12ssp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/third_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/second_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/stroke_layout_bottom_only">
+
+        <TextView
+            android:id="@+id/unconfirmed_layout_helper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="@string/未確認訂單商品數量"
+            android:textSize="@dimen/_12ssp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_5sdp"
+            app:layout_constraintTop_toTopOf="@+id/unconfirmed_layout_helper"
+            app:layout_constraintEnd_toStartOf="@id/unconfirmed_price"
+            android:text="@string/未確認訂單訂單金額"
+            android:textSize="@dimen/_12ssp"/>
+
+        <TextView
+            android:id="@+id/unconfirmed_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:text="@string/購物車商品金額"
+            android:textColor="#EA0000"
+            android:textSize="16sp"
+            app:layout_constraintTop_toTopOf="@+id/unconfirmed_layout_helper"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/third_layout"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/unconfirmed_ChatWithSeller"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_8sdp"
+            android:paddingStart="@dimen/_25sdp"
+            android:paddingEnd="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/聯絡賣家"
+            android:textSize="16sp"
+            android:textColor="@color/white"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

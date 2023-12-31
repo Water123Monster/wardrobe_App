@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.hamigua">
+
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.HAMIGUA">
+        <activity
+            android:name=".loginAcount.HAGE_Default_Setting"
+            android:exported="false"
+            android:theme="@style/Theme.HAMIGUA.NoActionBar"/>
+        <activity
+            android:name=".wardrobe.PersonalPreferenceSetting"
+            android:exported="false"
+            android:theme="@style/Theme.HAMIGUA.NoActionBar" />
+        <activity
+            android:name=".wardrobe.cloth.EditCloth"
+            android:exported="false"
+            android:theme="@style/Theme.HAMIGUA.NoActionBar" />
+        <activity
+            android:name=".shop.seller.SellerStore"
+            android:exported="false"
+            android:theme="@style/Theme.HAMIGUA.NoActionBar" />
+        <activity
+            android:name=".shop.seller.ShowProductsRate"
+            android:exported="false"
+            android:label="商品評價" />
+        <activity
+            android:name=".shop.customer.RatingProducts"
+            android:exported="false"
+            android:label="評價商品" />
+        <activity
+            android:name=".shop.seller.SellingList"
+            android:exported="false"
+            android:label="販售清單" />
+        <activity
+            android:name=".shop.customer.PurchaseList"
+            android:exported="false"
+            android:label="購買清單" />
+        <activity
+            android:name=".wardrobe.HAGE_Setting"
+            android:exported="false"
+            android:label="人偶設定" />
+        <activity
+            android:name=".shop.customer.Checkout"
+            android:exported="false"
+            android:label="結帳" />
+        <activity
+            android:name=".shop.customer.MyFavoriteProducts"
+            android:exported="false"
+            android:theme="@style/Theme.HAMIGUA.NoActionBar" />
+        <activity
+            android:name=".shop.customer.SearchingProductsResult"
+            android:exported="false"
+            android:theme="@style/Theme.HAMIGUA.NoActionBar" />
+        <activity
+            android:name=".shop.customer.SearchingProducts"
+            android:exported="false"
+            android:theme="@style/Theme.HAMIGUA.NoActionBar" />
+        <activity
+            android:name=".shop.customer.SingleProductView"
+            android:exported="false"
+            android:theme="@style/Theme.HAMIGUA.NoActionBar" />
+        <activity
+            android:name=".shop.customer.Cart"
+            android:exported="false"
+            android:label="購物車" />
+        <activity
+            android:name=".shop.seller.ChooseProductQuantity"
+            android:label="設定規格數量"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".shop.seller.ChooseProductSize"
+            android:label="新增規格"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".shop.seller.AddNewProducts"
+            android:label="新增商品" />
+        <activity
+            android:name=".shop.chat.RecentConversation"
+            android:label="聊聊" />
+        <activity
+            android:name=".shop.chat.ChatScreen"
+            android:exported="false"
+            android:theme="@style/Theme.HAMIGUA.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".shop.chat.UserList"
+            android:label="賣家列表" />
+        <activity
+            android:name=".communicate.Communicate_Control"
+            android:exported="false"
+            android:theme="@style/Theme.HAMIGUA.NoActionBar" />
+        <activity
+            android:name=".communicate.Communicate_Collocation"
+            android:exported="false"
+            android:theme="@style/Theme.HAMIGUA.NoActionBar" />
+        <activity
+            android:name=".communicate.Communicate_Setting"
+            android:exported="false"
+            android:theme="@style/Theme.HAMIGUA.NoActionBar" />
+        <activity
+            android:name=".communicate.Communicate_Article"
+            android:exported="false"
+            android:theme="@style/Theme.HAMIGUA.NoActionBar" />
+        <activity
+            android:name=".communicate.Communicate_Favorite"
+            android:exported="false"
+            android:theme="@style/Theme.HAMIGUA.NoActionBar" />
+        <activity
+            android:name=".communicate.Communicate_Chat"
+            android:exported="false"
+            android:theme="@style/Theme.HAMIGUA.NoActionBar" />
+        <activity
+            android:name=".communicate.Communicate_Browse"
+            android:exported="false"
+            android:theme="@style/Theme.HAMIGUA.NoActionBar" />
+        <activity
+            android:name=".communicate.Communicate_Explore"
+            android:exported="false"
+            android:theme="@style/Theme.HAMIGUA.NoActionBar" />
+        <activity
+            android:name=".wardrobe.Setting_Authority_BodyType"
+            android:exported="true"
+            android:label="模型身形" />
+        <activity
+            android:name=".wardrobe.Setting_Authority_Height"
+            android:exported="true"
+            android:label="模型身高" />
+        <activity
+            android:name=".wardrobe.favorite.ClothFavorite"
+            android:exported="true" />
+        <activity
+            android:name=".wardrobe.Setting_Authority_PhoneNumber"
+            android:exported="true"
+            android:label="手機號碼" />
+        <activity
+            android:name=".wardrobe.Setting_Authority_Password"
+            android:exported="true"
+            android:label="密碼" />
+        <activity
+            android:name=".wardrobe.Setting_Authority_Account"
+            android:exported="true"
+            android:label="帳號" />
+        <activity
+            android:name=".wardrobe.Setting_Authority_Birthday"
+            android:exported="true"
+            android:label="生日" />
+        <activity
+            android:name=".wardrobe.Setting_Authority_Gender"
+            android:exported="true"
+            android:label="性別" />
+        <activity
+            android:name=".wardrobe.Setting_Authority_Name"
+            android:exported="true"
+            android:label="用戶名稱" />
+        <activity
+            android:name=".wardrobe.Setting_Authority"
+            android:exported="true"
+            android:label="我的帳號" />
+        <activity
+            android:name=".wardrobe.Setting"
+            android:exported="true"
+            android:label="設定" />
+        <activity
+            android:name=".communicate.Communicate_Person"
+            android:theme="@style/Theme.HAMIGUA.NoActionBar" />
+        <activity
+            android:name=".communicate.Communicate_Post"
+            android:theme="@style/Theme.HAMIGUA.NoActionBar" />
+        <activity
+            android:name=".wardrobe.cloth.AddClothes"
+            android:theme="@style/Theme.HAMIGUA.NoActionBar" />
+        <activity
+            android:name=".loginAcount.ForgotPassword"
+            android:theme="@style/Theme.HAMIGUA.NoActionBar" />
+        <activity android:name=".wardrobe.statistics.ClothStatistics" />
+        <activity
+            android:name=".wardrobe.statistics.MainStatistics"
+            android:label="穿搭統計" />
+        <activity
+            android:name=".wardrobe.Cloth_Search"
+            android:theme="@style/Theme.HAMIGUA.NoActionBar" />
+        <activity
+            android:name=".shop.customer.Shop"
+            android:theme="@style/Theme.HAMIGUA.NoActionBar" />
+        <activity
+            android:name=".communicate.Communicate"
+            android:theme="@style/Theme.HAMIGUA.NoActionBar" />
+        <activity
+            android:name=".runway.Runway"
+            android:exported="true"
+            android:label="我的" />
+        <activity
+            android:name=".wardrobe.cloth.Cloth"
+            android:theme="@style/Theme.HAMIGUA.NoActionBar" />
+        <activity
+            android:name=".wardrobe.Article"
+            android:label="發布文章" />
+        <activity
+            android:name=".wardrobe.calendar.MyCalendar"
+            android:label="穿搭月曆" />
+        <activity android:name=".wardrobe.dressRecord.CalendarRecord" />
+        <activity
+            android:name=".wardrobe.statistics.Statistics"
+            android:theme="@style/Theme.HAMIGUA.NoActionBar" />
+        <activity
+            android:name=".wardrobe.cloth.PrivacySetting"
+            android:label="衣櫃隱私設定" />
+        <activity
+            android:name=".wardrobe.favorite.MyFavorite"
+            android:label="我的最愛" />
+        <activity
+            android:name=".HomePage"
+            android:theme="@style/Theme.HAMIGUA.NoActionBar" />
+        <activity
+            android:name=".loginAcount.SignUp"
+            android:theme="@style/Theme.HAMIGUA.NoActionBar" />
+        <activity
+            android:name=".loginAcount.MainActivity"
+            android:theme="@style/Theme.HAMIGUA.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.hamigua.CameraEx"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

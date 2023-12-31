@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "773630034854",
+    "project_id": "cantaloupewardrobe",
+    "storage_bucket": "cantaloupewardrobe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:773630034854:android:6e631e6f26634f92258567",
+        "android_client_info": {
+          "package_name": "com.example.firebase_test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "773630034854-j1ojjsitfkup9kpkr5s13nlm4du3gg8g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABSC8vX6_tnaK0m1Eiln_dmmy9TEbSZxA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "773630034854-j1ojjsitfkup9kpkr5s13nlm4du3gg8g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:773630034854:android:3350a0a366bfe6fa258567",
+        "android_client_info": {
+          "package_name": "com.example.hamigua"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "773630034854-j1ojjsitfkup9kpkr5s13nlm4du3gg8g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABSC8vX6_tnaK0m1Eiln_dmmy9TEbSZxA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "773630034854-j1ojjsitfkup9kpkr5s13nlm4du3gg8g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

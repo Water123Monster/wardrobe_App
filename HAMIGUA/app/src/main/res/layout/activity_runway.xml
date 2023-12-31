@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".runway.Runway">
+
+    //主頁面Layout
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="left"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/burgermuse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            //哈哥圖片
+
+            <Button
+                android:id="@+id/addcm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="+1公分" />
+
+            <TextView
+                android:id="@+id/cmview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="TextView" />
+
+            <Button
+                android:id="@+id/subcm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="-1公分" />
+
+            <Button
+                android:id="@+id/btn_open"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="衣櫃"
+                android:textColor="#000"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bodyshape"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/mrhathin"
+                android:layout_width="66dp"
+                android:layout_height="wrap_content"
+                android:text="男偏瘦" />
+
+            <Button
+                android:id="@+id/mrhafit"
+                android:layout_width="68dp"
+                android:layout_height="wrap_content"
+                android:text="男適中" />
+            <Button
+                android:id="@+id/mrhafat"
+                android:layout_width="66dp"
+                android:layout_height="wrap_content"
+                android:text="男偏胖" />
+            <Button
+                android:id="@+id/mshathin"
+                android:layout_width="66dp"
+                android:layout_height="wrap_content"
+                android:text="女偏瘦" />
+
+            <Button
+                android:id="@+id/mshafit"
+                android:layout_width="68dp"
+                android:layout_height="wrap_content"
+                android:text="女適中" />
+            <Button
+                android:id="@+id/mshafat"
+                android:layout_width="66dp"
+                android:layout_height="wrap_content"
+                android:text="女偏胖" />
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/Ha"
+            android:layout_width="304dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/male_fit" />
+
+        <ImageView
+            android:id="@+id/transparentclothe"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="-520dp"
+            android:alpha="1"
+            app:srcCompat="@drawable/transparent" />
+
+        <ImageView
+            android:id="@+id/transparentpants"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="0dp"
+            android:alpha="1"
+            app:srcCompat="@drawable/transparent" />
+
+        <ImageButton
+            android:id="@+id/imgclear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_baseline_delete_24" />
+
+
+    </LinearLayout>
+
+
+    //滑動選單Layout
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:background="@android:color/background_light"
+        android:gravity="left">
+
+        //衣服圖片按鈕
+        <ImageButton
+            android:id="@+id/clothebutton"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:layout_weight="3"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/testclothe"
+            />
+        <ImageButton
+            android:id="@+id/pantsbutton"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:layout_weight="3"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/testpants"
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+            android:orientation="horizontal">
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="?android:attr/windowBackground"
+            app:labelVisibilityMode="labeled"
+            app:itemTextColor="@drawable/selector"
+            app:itemIconTint="@drawable/selector"
+            app:menu="@menu/bottom_navigation_view" />
+
+
+    </RelativeLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <!--
+        <item
+            android:id="@+id/nav_article"
+            android:title="發布文章"
+            android:icon="@drawable/launch"/>
+        <item
+            android:id="@+id/nav_set"
+            android:title="隱私設定"
+            android:icon="@drawable/set"/>
+            -->
+        <item
+            android:id="@+id/nav_statistics"
+            android:title="穿搭統計"
+            android:icon="@drawable/statistics"/>
+        <item
+            android:id="@+id/nav_calendar"
+            android:title="穿搭月曆"
+            android:icon="@drawable/calendar"/>
+        <item
+            android:id="@+id/nav_like"
+            android:title="我的最愛"
+            android:icon="@drawable/ic_baseline_favorite_border_24"/>
+        <item
+            android:id="@+id/nav_setting"
+            android:title="設定"
+            android:icon="@drawable/ic_baseline_settings_24"/>
+    </group>
+</menu>

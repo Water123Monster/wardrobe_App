@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:title="發布文章"
+            android:icon="@drawable/launch"/>
+        <item
+            android:id="@+id/nav_set"
+            android:title="隱私設定"
+            android:icon="@drawable/set"/>
+        <item
+            android:id="@+id/nav_statistics"
+            android:title="穿搭統計"
+            android:icon="@drawable/statistics"/>
+        <item
+            android:id="@+id/nav_calendar"
+            android:title="穿搭日曆"
+            android:icon="@drawable/calendar"/>
+    </group>
+</menu>

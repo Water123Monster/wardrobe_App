@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".shop.customer.SearchingProductsResult">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/searchResult_recyclerView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/header_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@color/white"
+                android:elevation="@dimen/_5sdp"
+                android:animateLayoutChanges="true">
+
+                <ImageView
+                    android:id="@+id/searchResult_back"
+                    android:layout_width="@dimen/_21sdp"
+                    android:layout_height="@dimen/_21sdp"
+                    android:layout_marginStart="@dimen/_9sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/fragmentTable"
+                    android:background="@drawable/ic_baseline_arrow_back_24"
+                    android:backgroundTint="@color/gray"/>
+
+                <EditText
+                    android:id="@+id/checkoutTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_33sdp"
+                    android:layout_marginStart="@dimen/_9sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_5sdp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/fragmentTable"
+                    app:layout_constraintLeft_toRightOf="@id/searchResult_back"
+                    app:layout_constraintRight_toLeftOf="@id/layout_helper"
+                    android:hint="@string/搜尋更多商品"
+                    android:textSize="@dimen/_12ssp"
+                    android:drawableStart="@drawable/ic_baseline_search_24"
+                    android:drawablePadding="@dimen/_2sdp"
+                    android:background="@color/more_light_gray_94" />
+
+                <LinearLayout
+                    android:id="@+id/layout_helper"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_45sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/fragmentTable"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <ImageView
+                        android:id="@+id/open_cart"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/ic_baseline_shopping_cart_24"/>
+
+                    <com.nex3z.notificationbadge.NotificationBadge
+                        android:id="@+id/cart_badge"
+                        android:layout_width="@dimen/_23sdp"
+                        android:layout_height="@dimen/_23sdp"
+                        android:layout_marginStart="-18dp"
+                        app:layout_constraintLeft_toRightOf="@id/open_cart"
+                        app:nbBackground="@drawable/cart_badge_with_shadow"
+                        app:nbMaxTextLength="2" />
+                </LinearLayout>
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/fragmentTable"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/checkoutTitle"
+                    app:tabIndicatorColor="@color/blue_main"
+                    app:tabSelectedTextColor="@color/blue_main">
+
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/最新"/>
+
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/價格"/>
+
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/評價"/>
+
+                </com.google.android.material.tabs.TabLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/priceFilter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/fragmentTable"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:background="@color/white"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/minimumPrice"
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/priceFilterHelper"
+                        android:hint="@string/最小值"
+                        android:inputType="number"
+                        android:textSize="@dimen/_12ssp"
+                        android:background="@drawable/stroke_layout" />
+
+                    <TextView
+                        android:id="@+id/priceFilterHelper"
+                        android:layout_width="@dimen/_10sdp"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        app:layout_constraintStart_toEndOf="@id/minimumPrice"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:background="@color/light_gray_78"/>
+
+                    <EditText
+                        android:id="@+id/maximumPrice"
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/priceFilterHelper"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:hint="@string/最大值"
+                        android:inputType="number"
+                        android:textSize="@dimen/_12ssp"
+                        android:background="@drawable/stroke_layout" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnPriceFilter"
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/maximumPrice"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:text="@string/確認"
+                        android:textSize="@dimen/_12ssp"
+                        android:textColor="@color/white"
+                        android:background="@color/blue_main" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnPriceOrderBy"
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:text="@string/由低至高"
+                        android:textSize="@dimen/_12ssp"
+                        android:textColor="@color/white"
+                        android:background="@color/blue_main" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/ratingFilter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/fragmentTable"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:background="@color/white"
+                    android:visibility="gone">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnRatingStar_1"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/ratingStar_2"
+                        app:layout_constraintHorizontal_weight="1"
+                        android:text="一顆星"
+                        android:gravity="center"
+                        android:textSize="@dimen/_12ssp"
+                        android:textColor="@color/white"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/ratingStar_2"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/btnRatingStar_1"
+                        app:layout_constraintEnd_toStartOf="@id/ratingStar_3"
+                        app:layout_constraintHorizontal_weight="1"
+                        android:text="二顆星"
+                        android:gravity="center"
+                        android:textSize="@dimen/_12ssp"
+                        android:textColor="@color/white"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/ratingStar_3"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ratingStar_2"
+                        app:layout_constraintEnd_toStartOf="@id/ratingStar_4"
+                        app:layout_constraintHorizontal_weight="1"
+                        android:text="三顆星"
+                        android:gravity="center"
+                        android:textSize="@dimen/_12ssp"
+                        android:textColor="@color/white"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/ratingStar_4"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ratingStar_3"
+                        app:layout_constraintEnd_toStartOf="@id/ratingStar_5"
+                        app:layout_constraintHorizontal_weight="1"
+                        android:text="四顆星"
+                        android:gravity="center"
+                        android:textSize="@dimen/_12ssp"
+                        android:textColor="@color/white"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/ratingStar_5"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ratingStar_4"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_weight="1"
+                        android:text="五顆星"
+                        android:gravity="center"
+                        android:textSize="@dimen/_12ssp"
+                        android:textColor="@color/white" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/searchResult_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:nestedScrollingEnabled="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nestedScrollView"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

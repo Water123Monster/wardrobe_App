@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomePage"
+    android:id="@+id/drawer_layout">
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/nav_view"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/main_menu"
+        android:layout_gravity="start"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/first_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <Button
+                android:id="@+id/btnChoose"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@drawable/choose"
+                app:backgroundTint="#4F4F4F" />
+
+            <ImageView
+                android:id="@+id/record_outfit"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/open_wardrobe"
+                app:srcCompat="@drawable/ic_baseline_sd_storage_24" />
+
+            <ImageView
+                android:id="@+id/open_wardrobe"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:srcCompat="@drawable/wardrobe_icon" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/second_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/first_layout"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ImageView
+                    android:id="@+id/Ha"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="120dp" />
+
+                <ImageView
+                    android:id="@+id/toplocationpoint"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginLeft="200dp"
+                    android:src="@drawable/transparent"/>
+
+                <ImageView
+                    android:id="@+id/bottomlocationpoint"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginLeft="200dp"
+                    android:src="@drawable/transparent"/>
+
+                <ImageView
+                    android:id="@+id/top_scale_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="118dp"
+                    android:layout_marginEnd="118dp"
+                    android:src="@drawable/transparent" />
+
+                <ImageView
+                    android:id="@+id/bottom_scale_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="118dp"
+                    android:layout_marginEnd="118dp"
+                    android:scaleType="center"
+                    android:src="@drawable/transparent" />
+
+                <ImageView
+                    android:id="@+id/shopClothesTint"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:background="@drawable/ic_baseline_shopping_cart_24"
+                    android:backgroundTint="@color/red"
+                    android:visibility="invisible"/>
+
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_70sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/bottomNav">
+
+            <ImageButton
+                android:id="@+id/imgclear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/add_Clothes"
+                app:srcCompat="@drawable/ic_baseline_delete_24"
+                tools:ignore="VectorDrawableCompat" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/add_Clothes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:clickable="true"
+                app:backgroundTint="#8BA8E2"
+                app:srcCompat="@drawable/ic_add" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="?android:attr/windowBackground"
+            app:itemIconTint="@drawable/selector"
+            app:itemTextColor="@drawable/selector"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/bottom_navigation_view" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnChoose"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/choose"
+                app:backgroundTint="#4F4F4F" />
+
+            <ImageView
+                android:id="@+id/record_outfit"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="260dp"
+                android:layout_marginTop="10dp"
+                app:srcCompat="@drawable/ic_baseline_sd_storage_24" />
+            <ImageView
+                android:id="@+id/open_wardrobe"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="12dp"
+                app:srcCompat="@drawable/wardrobe_icon" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/Ha"
+                    android:layout_width="320dp"
+                    android:layout_height="520dp"
+                    android:layout_marginTop="0dp" />
+
+                <com.example.hamigua.wardrobe.ScaleImage
+                    android:id="@+id/top_scale_image"
+                    android:layout_width="220dp"
+                    android:layout_height="260dp"
+                    android:layout_alignStart="@id/Ha"
+                    android:layout_alignEnd="@id/Ha"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginEnd="0dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/transparent" />
+
+                <com.example.hamigua.wardrobe.ScaleImage
+                    android:id="@+id/bottom_scale_image"
+                    android:layout_width="220dp"
+                    android:layout_height="260dp"
+                    android:layout_alignStart="@id/Ha"
+                    android:layout_alignEnd="@id/Ha"
+                    android:layout_alignBottom="@id/Ha"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/transparent" />
+
+
+            </RelativeLayout>
+
+
+            
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomNav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="?android:attr/windowBackground"
+                app:itemIconTint="@drawable/selector"
+                app:itemTextColor="@drawable/selector"
+                app:labelVisibilityMode="labeled"
+                app:menu="@menu/bottom_navigation_view" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/imgclear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="290dp"
+            android:layout_marginTop="630dp"
+            app:srcCompat="@drawable/ic_baseline_delete_24"
+            tools:ignore="VectorDrawableCompat" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add_Clothes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="620dp"
+            android:layout_marginLeft="10dp"
+            android:clickable="true"
+            app:backgroundTint="#8BA8E2"
+            app:srcCompat="@drawable/ic_add" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/imglike">
+
+        <ImageButton
+            android:id="@+id/btnFavotite"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/favorite_select"
+            android:drawableTop="@drawable/ic_baseline_favorite_border"
+            />
+    </FrameLayout>
+
+    -->
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

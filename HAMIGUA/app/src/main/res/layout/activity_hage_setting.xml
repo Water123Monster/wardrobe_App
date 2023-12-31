@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".wardrobe.HAGE_Setting">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/gender_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/stroke_layout_bottom_only">
+
+        <TextView
+            android:id="@+id/gender_helper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="@string/人偶性別"
+            android:textSize="@dimen/_15ssp"/>
+
+        <RadioGroup
+            android:id="@+id/HAGE_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/gender_helper"
+            android:orientation="horizontal">
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/HAGE_male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="1dp"
+                android:paddingEnd="10dp"
+                android:text="@string/男性"
+                android:textSize="@dimen/_13ssp"
+                android:buttonTint="@color/blue_main"/>
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/HAGE_female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="1dp"
+                android:paddingEnd="10dp"
+                android:text="@string/女性"
+                android:textSize="@dimen/_13ssp"
+                android:buttonTint="@color/blue_main"/>
+        </RadioGroup>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/height_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        app:layout_constraintTop_toBottomOf="@id/gender_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/stroke_layout_bottom_only">
+
+        <TextView
+            android:id="@+id/height_helper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="@string/人偶身高"
+            android:textSize="@dimen/_15ssp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            app:layout_constraintStart_toEndOf="@id/height_helper"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:hint="身高"
+            android:textColor="#000"
+            android:textColorHint="#6C6C6C">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/HAGE_height"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bodyType_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        app:layout_constraintTop_toBottomOf="@id/height_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/stroke_layout_bottom_only">
+
+        <TextView
+            android:id="@+id/bodyType_helper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="@string/人偶身形"
+            android:textSize="@dimen/_15ssp"/>
+
+        <RadioGroup
+            android:id="@+id/HAGE_bodyType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/bodyType_helper"
+            android:orientation="horizontal">
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/bodyType_thin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="1dp"
+                android:paddingEnd="10dp"
+                android:text="@string/偏瘦"
+                android:textSize="@dimen/_13ssp"
+                android:buttonTint="@color/blue_main"/>
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/bodyType_fit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="1dp"
+                android:paddingEnd="10dp"
+                android:text="@string/適中"
+                android:textSize="@dimen/_13ssp"
+                android:buttonTint="@color/blue_main"/>
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/bodyType_fat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="1dp"
+                android:paddingEnd="10dp"
+                android:text="@string/偏胖"
+                android:textSize="@dimen/_13ssp"
+                android:buttonTint="@color/blue_main"/>
+        </RadioGroup>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ratio_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        app:layout_constraintTop_toBottomOf="@id/bodyType_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/stroke_layout_bottom_only">
+
+        <TextView
+            android:id="@+id/ratio_helper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="@string/身長比例"
+            android:textSize="@dimen/_15ssp"/>
+
+        <RadioGroup
+            android:id="@+id/HAGE_bodyRatio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ratio_helper"
+            android:orientation="horizontal">
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/ratio_fourSix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="1dp"
+                android:paddingEnd="10dp"
+                android:text="@string/_46"
+                android:textSize="@dimen/_13ssp"
+                android:buttonTint="@color/blue_main"/>
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/ratio_fiveFive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="1dp"
+                android:paddingEnd="10dp"
+                android:text="@string/_55"
+                android:textSize="@dimen/_13ssp"
+                android:buttonTint="@color/blue_main"/>
+        </RadioGroup>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/armSwing_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        app:layout_constraintTop_toBottomOf="@id/ratio_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/stroke_layout_bottom_only">
+
+        <TextView
+            android:id="@+id/armSwing_helper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="@string/手臂擺福"
+            android:textSize="@dimen/_15ssp"/>
+
+        <RadioGroup
+            android:id="@+id/HAGE_armSwing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/armSwing_helper"
+            android:orientation="horizontal">
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/armSwing_high"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="1dp"
+                android:paddingEnd="10dp"
+                android:text="@string/擺福較高"
+                android:textSize="@dimen/_13ssp"
+                android:buttonTint="@color/blue_main"/>
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/armSwing_low"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="1dp"
+                android:paddingEnd="10dp"
+                android:text="@string/擺福較低"
+                android:textSize="@dimen/_13ssp"
+                android:buttonTint="@color/blue_main"/>
+        </RadioGroup>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/white"
+        android:elevation="@dimen/_5sdp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/確認"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

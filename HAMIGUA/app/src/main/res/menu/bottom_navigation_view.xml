@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="衣櫃"
+        android:id="@+id/Cloth"
+        android:icon="@drawable/cloth_1"
+        />
+    <!--"
+
+    <item android:title="社群"
+        android:id="@+id/Communicate"
+        android:icon="@drawable/ic_baseline_post_add_24"
+        />
+    "-->
+
+    <item android:title="商城"
+        android:id="@+id/Shop"
+        android:icon="@drawable/ic_baseline_shopping_cart_24"
+        />
+    <item android:title="我的"
+        android:id="@+id/Runway"
+        android:icon="@drawable/ic_baseline_person_24"
+        />
+
+</menu>

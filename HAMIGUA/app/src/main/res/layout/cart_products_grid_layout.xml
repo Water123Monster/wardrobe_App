@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.chauthai.swipereveallayout.SwipeRevealLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipeRevealLayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:mode="same_level"
+    app:dragEdge="right">
+
+    <!-- Your secondary layout here -->
+    <LinearLayout
+        android:id="@+id/layout_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="#ee4d2d">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="10dp"
+            android:gravity="center"
+            android:text="@string/刪除"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            app:drawableEndCompat="@drawable/ic_baseline_delete_24"
+            android:drawablePadding="-20dp"/>
+
+    </LinearLayout>
+
+    <!-- Your main layout here -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/cart_product_checkbox"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="40dp"
+            android:buttonTint="@color/blue_main"
+            android:padding="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/rating_product_imageview"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/stroke_layout"
+            app:layout_constraintStart_toEndOf="@+id/cart_product_checkbox"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/rating_product_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/商品名稱"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/rating_product_imageview"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/rating_product_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:background="@color/more_light_gray_94"
+            android:padding="5dp"
+            android:text="@string/購物車商品規格"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/rating_product_imageview"
+            app:layout_constraintTop_toBottomOf="@+id/rating_product_name"
+            app:drawableEndCompat="@drawable/ic_baseline_keyboard_arrow_down_24"
+            app:drawableTint="@color/gray"
+            android:drawablePadding="2dp"/>
+
+        <TextView
+            android:id="@+id/rating_product_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/購物車商品金額"
+            android:textColor="#EA0000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/rating_product_imageview"
+            app:layout_constraintTop_toBottomOf="@+id/rating_product_size" />
+
+        <ImageView
+            android:id="@+id/cart_product_quantity_minus"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/stroke_layout_right_out"
+            android:padding="5dp"
+            android:src="@drawable/ic_baseline_remove_24"
+            app:layout_constraintStart_toEndOf="@+id/rating_product_imageview"
+            app:layout_constraintTop_toBottomOf="@+id/rating_product_price"
+            app:tint="@color/gray" />
+
+        <ImageView
+            android:id="@+id/select_product_quantity_plus"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:background="@drawable/stroke_layout_left_out"
+            android:src="@drawable/ic_baseline_add_24"
+            app:layout_constraintStart_toEndOf="@+id/select_product_quantity"
+            app:layout_constraintTop_toBottomOf="@+id/rating_product_price"
+            app:tint="@color/gray"/>
+
+        <EditText
+            android:id="@+id/select_product_quantity"
+            android:layout_width="60dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/stroke_layout"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/購物車商品數量"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cart_product_quantity_minus"
+            app:layout_constraintTop_toBottomOf="@+id/rating_product_price" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</com.chauthai.swipereveallayout.SwipeRevealLayout>

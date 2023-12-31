@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_favorite"
+            android:title="我的收藏"
+            android:icon="@drawable/ic_baseline_favorite_24"/>
+        <item
+            android:id="@+id/nav_note"
+            android:title="我的筆記"
+            android:icon="@drawable/ic_baseline_post_add_24"/>
+        <item
+            android:id="@+id/nav_communicate_set"
+            android:title="社群設定"
+            android:icon="@drawable/set"/>
+        <item
+            android:id="@+id/nav_collocation"
+            android:title="搭配其他衣櫃"
+            android:icon="@drawable/ic_baseline_extension_24"/>
+        <item
+            android:id="@+id/nav_control"
+            android:title="操控其他衣櫃"
+            android:icon="@drawable/ic_baseline_back_hand_24"/>
+
+    </group>
+</menu>

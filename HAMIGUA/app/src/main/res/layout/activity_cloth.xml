@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".wardrobe.cloth.Cloth">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn_Clothes_Selected"
+                    android:layout_width="70dp"
+                    android:layout_height="65dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/button_style_blue"
+                    android:text="已選擇" />
+
+                <Button
+                    android:id="@+id/btn_Short_Sleeve"
+                    android:layout_width="70dp"
+                    android:layout_height="65dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/button_style_blue"
+                    android:text="短袖上衣" />
+
+                <Button
+                    android:id="@+id/btn_Long_Sleeve"
+                    android:layout_width="70dp"
+                    android:layout_height="65dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/button_style_blue"
+                    android:text="長袖上衣" />
+
+                <Button
+                    android:id="@+id/btn_Vest"
+                    android:layout_width="70dp"
+                    android:layout_height="65dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/button_style_blue"
+                    android:text="背心" />
+
+                <Button
+                    android:id="@+id/btn_Shorts"
+                    android:layout_width="70dp"
+                    android:layout_height="65dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/button_style_blue"
+                    android:text="短褲" />
+
+                <Button
+                    android:id="@+id/btn_Pants"
+                    android:layout_width="70dp"
+                    android:layout_height="65dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/button_style_blue"
+                    android:text="長褲" />
+
+                <Button
+                    android:id="@+id/btn_Skirt"
+                    android:layout_width="70dp"
+                    android:layout_height="65dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/button_style_blue"
+                    android:text="裙子" />
+
+                <Button
+                    android:id="@+id/btn_Coat"
+                    android:layout_width="70dp"
+                    android:layout_height="65dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/button_style_blue"
+                    android:text="外套" />
+
+                <Button
+                    android:id="@+id/btn_Suit"
+                    android:layout_width="70dp"
+                    android:layout_height="65dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/button_style_blue"
+                    android:text="套裝" />
+
+                <Button
+                    android:id="@+id/btn_Accessories"
+                    android:layout_width="70dp"
+                    android:layout_height="65dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/button_style_blue"
+                    android:text="配件" />
+
+                <Button
+                    android:id="@+id/btn_Shop"
+                    android:layout_width="70dp"
+                    android:layout_height="65dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/button_style_blue"
+                    android:text="商城" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/clothesRecyclerView">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+
+</LinearLayout>

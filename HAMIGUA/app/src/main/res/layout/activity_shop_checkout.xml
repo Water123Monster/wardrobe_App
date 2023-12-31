@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".shop.customer.Checkout">
+
+
+
+    <TextView
+        android:id="@+id/orderDetail"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_25sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/訂單詳情"
+        android:gravity="center"
+        android:background="@color/white"
+        android:elevation="@dimen/_5sdp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/orderRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/orderDetail"
+        app:layout_constraintBottom_toTopOf="@id/footer_layout"
+        android:nestedScrollingEnabled="false"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/footer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/checkout_text_helper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_3sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:text="@string/總金額"
+            android:textSize="15sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_checkout" />
+
+        <TextView
+            android:id="@+id/price_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginTop="3dp"
+            android:text="@string/money"
+            android:textColor="#EA0000"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/checkout_total_price"
+            app:layout_constraintTop_toBottomOf="@id/checkout_text_helper" />
+
+        <TextView
+            android:id="@+id/checkout_total_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="5dp"
+            android:text="@string/money0"
+            android:textColor="#EA0000"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/btn_checkout"
+            app:layout_constraintTop_toBottomOf="@id/checkout_text_helper" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_checkout"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/結帳"
+            android:textSize="@dimen/_13ssp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:background="@color/blue_main"
+            app:cornerRadius="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
